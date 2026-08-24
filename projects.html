@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio - Project Gallery</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="min-h-screen flex flex-col justify-between selection:bg-indigo-500 selection:text-white">
+
+  <header class="sticky top-0 z-50 bg-slate-900/80 backdrop-blur-md border-b border-slate-800/80">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="index.html" class="text-xl font-extrabold gradient-text">Portofolio</a>
+      <nav class="flex space-x-6 text-sm font-medium">
+        <a href="about.html" class="nav-link text-slate-300 hover:text-indigo-400 transition">About Me</a>
+        <a href="education.html" class="nav-link text-slate-300 hover:text-indigo-400 transition">Education</a>
+        <a href="projects.html" class="nav-link text-slate-300 hover:text-indigo-400 transition">Project Gallery</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-6 py-12 flex-grow w-full">
+    <div class="max-w-4xl mx-auto space-y-8">
+      
+      <div>
+        <span class="text-xs font-semibold px-3 py-1 bg-indigo-500/20 text-indigo-300 rounded-full uppercase tracking-wider">Karya & Portfolio</span>
+        <h1 class="text-3xl font-bold mt-2">Galeri Project</h1>
+        <p class="text-slate-400 text-sm mt-1">Scroll ke bawah (vertikal) untuk mengeksplorasi koleksi project yang telah saya kerjakan.</p>
+      </div>
+
+      <!-- Scroll Atas - Bawah (Vertical Container Layout) -->
+      <div class="space-y-8">
+
+        <div class="glass-card rounded-3xl overflow-hidden flex flex-col md:flex-row group">
+          <div class="img-zoom-container w-full md:w-1/2 h-64 md:h-auto shrink-0 relative">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&auto=format&fit=crop&q=80" alt="Project 1" class="w-full h-full object-cover">
+          </div>
+          <div class="p-6 md:p-8 flex flex-col justify-between space-y-4 w-full">
+            <div>
+              <div class="flex flex-wrap gap-2 mb-3">
+                <span class="text-xs px-3 py-1 bg-indigo-500/20 text-indigo-300 rounded-full border border-indigo-500/30">React.js</span>
+                <span class="text-xs px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full border border-purple-500/30">Tailwind CSS</span>
+                <span class="text-xs px-3 py-1 bg-pink-500/20 text-pink-300 rounded-full border border-pink-500/30">Chart.js</span>
+              </div>
+              <h2 class="text-2xl font-bold mb-2">E-Commerce Analytics Dashboard</h2>
+              <p class="text-slate-300 text-sm leading-relaxed font-light">
+                Platform dashboard interaktif untuk pemantauan penjualan real-time, statistik transaksi pelanggan, dan manajemen persediaan stok barang secara otomatis.
+              </p>
+            </div>
+            <div class="pt-2">
+              <a href="#" class="inline-flex items-center gap-2 text-indigo-400 hover:text-indigo-300 font-semibold text-sm group-hover:translate-x-1 transition-transform">
+                Lihat Detail Project <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card rounded-3xl overflow-hidden flex flex-col md:flex-row group">
+          <div class="img-zoom-container w-full md:w-1/2 h-64 md:h-auto shrink-0 relative">
+            <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=600&auto=format&fit=crop&q=80" alt="Project 2" class="w-full h-full object-cover">
+          </div>
+          <div class="p-6 md:p-8 flex flex-col justify-between space-y-4 w-full">
+            <div>
+              <div class="flex flex-wrap gap-2 mb-3">
+                <span class="text-xs px-3 py-1 bg-emerald-500/20 text-emerald-300 rounded-full border border-emerald-500/30">Node.js</span>
+                <span class="text-xs px-3 py-1 bg-cyan-500/20 text-cyan-300 rounded-full border border-cyan-500/30">Express</span>
+                <span class="text-xs px-3 py-1 bg-teal-500/20 text-teal-300 rounded-full border border-teal-500/30">MongoDB</span>
+              </div>
+              <h2 class="text-2xl font-bold mb-2">RESTful API Service Gateway</h2>
+              <p class="text-slate-300 text-sm leading-relaxed font-light">
+                Arsitektur backend mikroservis yang menangani autentikasi JWT terenkripsi, pengolahan transaksi pembayaran, dan rate-limiting lalu lintas data.
+              </p>
+            </div>
+            <div class="pt-2">
+              <a href="#" class="inline-flex items-center gap-2 text-indigo-400 hover:text-indigo-300 font-semibold text-sm group-hover:translate-x-1 transition-transform">
+                Lihat Detail Project <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card rounded-3xl overflow-hidden flex flex-col md:flex-row group">
+          <div class="img-zoom-container w-full md:w-1/2 h-64 md:h-auto shrink-0 relative">
+            <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&auto=format&fit=crop&q=80" alt="Project 3" class="w-full h-full object-cover">
+          </div>
+          <div class="p-6 md:p-8 flex flex-col justify-between space-y-4 w-full">
+            <div>
+              <div class="flex flex-wrap gap-2 mb-3">
+                <span class="text-xs px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full border border-blue-500/30">Flutter</span>
+                <span class="text-xs px-3 py-1 bg-amber-500/20 text-amber-300 rounded-full border border-amber-500/30">Firebase</span>
+              </div>
+              <h2 class="text-2xl font-bold mb-2">Mobile Task Tracker App</h2>
+              <p class="text-slate-300 text-sm leading-relaxed font-light">
+                Aplikasi manajemen tugas produktivitas harian dengan dukungan kalender sinkronisasi cloud, notifikasi pengingat, dan analitik habit tracking.
+              </p>
+            </div>
+            <div class="pt-2">
+              <a href="#" class="inline-flex items-center gap-2 text-indigo-400 hover:text-indigo-300 font-semibold text-sm group-hover:translate-x-1 transition-transform">
+                Lihat Detail Project <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="border-t border-slate-800/80 py-6 text-center text-slate-500 text-sm">
+    &copy; 2026 Portofolio Saya. All rights reserved.
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
