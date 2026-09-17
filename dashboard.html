@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard — Portofolio Abdi Fysabilillah</title>
+  <meta name="description"
+    content="Dashboard portfolio Abdi Fysabilillah — ringkasan proyek, skill, dan navigasi cepat.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="selection:bg-indigo-500 selection:text-white">
+
+  <!-- ── Loading Overlay ─────────────────────────────────────── -->
+  <div id="loadingOverlay" class="dashboard-loading">
+    <div class="dashboard-loading-spinner"></div>
+  </div>
+
+  <!-- ── Main Dashboard (tersembunyi sampai sesi valid) ─────── -->
+  <div id="dashboardContent" style="display:none;">
+
+    <!-- ── Topbar ────────────────────────────────────────────── -->
+    <header class="dashboard-topbar">
+      <div class="dashboard-topbar-inner">
+        <div class="dashboard-logo">
+          <div class="dashboard-logo-icon">
+            <i class="fa-solid fa-code"></i>
+          </div>
+          <span class="gradient-text">Portofolio</span>
+        </div>
+
+        <nav class="dashboard-nav">
+          <a href="about.html" id="navAbout" class="dashboard-nav-link">
+            <i class="fa-solid fa-user"></i>
+            <span>About</span>
+          </a>
+          <a href="education.html" id="navEdu" class="dashboard-nav-link">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <span>Education</span>
+          </a>
+          <a href="projects.html" id="navProjects" class="dashboard-nav-link">
+            <i class="fa-solid fa-laptop-code"></i>
+            <span>Projects</span>
+          </a>
+        </nav>
+
+        <button id="logoutBtn" class="dashboard-logout-btn" aria-label="Logout">
+          <i class="fa-solid fa-right-from-bracket"></i>
+          <span>Keluar</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- ── Main Content ───────────────────────────────────────── -->
+    <main class="dashboard-main">
+
+      <!-- Welcome Banner -->
+      <section class="dashboard-welcome glass-card">
+        <div class="dashboard-welcome-avatar">
+          <i class="fa-solid fa-user-circle"></i>
+        </div>
+        <div class="dashboard-welcome-text">
+          <p class="dashboard-welcome-greeting">Selamat datang kembali 👋</p>
+          <h1 id="welcomeName" class="gradient-text">Loading...</h1>
+          <p id="welcomeUsername" class="dashboard-welcome-sub">@username</p>
+        </div>
+        <div class="dashboard-welcome-badge">
+          <i class="fa-solid fa-shield-halved"></i>
+          <span>Sesi Aktif</span>
+        </div>
+      </section>
+
+      <!-- Stats Row -->
+      <section class="dashboard-stats">
+
+        <div class="dashboard-stat-card glass-card" id="statProjects">
+          <div class="dashboard-stat-icon" style="background: linear-gradient(135deg,#4f46e5,#7c3aed);">
+            <i class="fa-solid fa-laptop-code"></i>
+          </div>
+          <div class="dashboard-stat-info">
+            <span class="dashboard-stat-value">8+</span>
+            <span class="dashboard-stat-label">Projects</span>
+          </div>
+        </div>
+
+        <div class="dashboard-stat-card glass-card" id="statSkills">
+          <div class="dashboard-stat-icon" style="background: linear-gradient(135deg,#0ea5e9,#6366f1);">
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <div class="dashboard-stat-info">
+            <span class="dashboard-stat-value">15+</span>
+            <span class="dashboard-stat-label">Skills</span>
+          </div>
+        </div>
+
+        <div class="dashboard-stat-card glass-card" id="statExp">
+          <div class="dashboard-stat-icon" style="background: linear-gradient(135deg,#10b981,#0ea5e9);">
+            <i class="fa-solid fa-briefcase"></i>
+          </div>
+          <div class="dashboard-stat-info">
+            <span class="dashboard-stat-value">2+</span>
+            <span class="dashboard-stat-label">Tahun Exp.</span>
+          </div>
+        </div>
+
+        <div class="dashboard-stat-card glass-card" id="statCert">
+          <div class="dashboard-stat-icon" style="background: linear-gradient(135deg,#f59e0b,#ec4899);">
+            <i class="fa-solid fa-certificate"></i>
+          </div>
+          <div class="dashboard-stat-info">
+            <span class="dashboard-stat-value">5+</span>
+            <span class="dashboard-stat-label">Sertifikasi</span>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Quick Nav Cards -->
+      <section class="dashboard-quicknav">
+        <h2 class="dashboard-section-title">Jelajahi Portfolio</h2>
+        <div class="dashboard-quicknav-grid">
+
+          <a href="about.html" class="dashboard-qnav-card glass-card" id="qnavAbout">
+            <div class="dashboard-qnav-icon" style="background: linear-gradient(135deg,#4f46e5,#7c3aed);">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="dashboard-qnav-body">
+              <h3>About Me</h3>
+              <p>Kenali lebih dekat — profil, keahlian, dan pengalaman saya.</p>
+            </div>
+            <i class="fa-solid fa-arrow-right dashboard-qnav-arrow"></i>
+          </a>
+
+          <a href="education.html" class="dashboard-qnav-card glass-card" id="qnavEdu">
+            <div class="dashboard-qnav-icon" style="background: linear-gradient(135deg,#0ea5e9,#6366f1);">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <div class="dashboard-qnav-body">
+              <h3>Education</h3>
+              <p>Riwayat pendidikan formal dan sertifikasi yang saya miliki.</p>
+            </div>
+            <i class="fa-solid fa-arrow-right dashboard-qnav-arrow"></i>
+          </a>
+
+          <a href="projects.html" class="dashboard-qnav-card glass-card" id="qnavProjects">
+            <div class="dashboard-qnav-icon" style="background: linear-gradient(135deg,#10b981,#0ea5e9);">
+              <i class="fa-solid fa-laptop-code"></i>
+            </div>
+            <div class="dashboard-qnav-body">
+              <h3>Projects</h3>
+              <p>Portofolio proyek nyata yang pernah saya kerjakan.</p>
+            </div>
+            <i class="fa-solid fa-arrow-right dashboard-qnav-arrow"></i>
+          </a>
+
+        </div>
+      </section>
+
+      <!-- Account Info -->
+      <section class="dashboard-account glass-card">
+        <div class="dashboard-account-header">
+          <i class="fa-solid fa-circle-info"></i>
+          <h2>Informasi Akun</h2>
+        </div>
+        <div class="dashboard-account-rows">
+          <div class="dashboard-account-row">
+            <span class="dashboard-account-label"><i class="fa-solid fa-id-card"></i> Nama</span>
+            <span id="infoFullName" class="dashboard-account-value">—</span>
+          </div>
+          <div class="dashboard-account-row">
+            <span class="dashboard-account-label"><i class="fa-solid fa-at"></i> Username</span>
+            <span id="infoUsername" class="dashboard-account-value">—</span>
+          </div>
+          <div class="dashboard-account-row">
+            <span class="dashboard-account-label"><i class="fa-solid fa-envelope"></i> Email</span>
+            <span id="infoEmail" class="dashboard-account-value">—</span>
+          </div>
+          <div class="dashboard-account-row">
+            <span class="dashboard-account-label"><i class="fa-solid fa-shield-halved"></i> Status</span>
+            <span class="dashboard-account-value" style="color:#34d399;">
+              <i class="fa-solid fa-circle" style="font-size:0.5rem; margin-right:0.3rem;"></i>Aktif
+            </span>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div><!-- /#dashboardContent -->
+
+  <script src="script.js"></script>
+  <script src="dashboard.js"></script>
+</body>
+
+</html>
